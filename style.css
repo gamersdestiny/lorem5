@@ -5,6 +5,8 @@
     --black: #212121;
     --dark: #282828;
     --light: #FBFBFB;
+    --yellow: #F3FF6E;
+    --light-white: rgba(251, 251, 251, 0.8);
     --light-green: #A2F6B9;
     --light-blue: #10CFE9;
     --dark-grey: #868686;
@@ -18,6 +20,7 @@ body{
     padding: 0%;
     font-family: sans-serif;
     font-weight: 550;
+    background-color: var(--light-grey);
 }
 
 .navbar-container {
@@ -29,7 +32,7 @@ body{
 
 .logo {
     padding: 0.5em 2em;
-    background-color: #F3FF6E;
+    background-color: var(--yellow);
     color: #000;
     border-radius: .5em;
     margin: 2em;
@@ -42,59 +45,165 @@ body{
 
 .items1, .items2, .items3 {
     display: inline-block;
-    background-color: #A2F6B9;
+    background-color: var(--light-green);
     color: #212;
     margin: 1.5em 1em;
     padding: .3em 2em;
     border-radius: 10px;
 }
 
+/* section 1 */
 .content-section {
-    position: relative;
+	display: grid;
+	grid-template-area: 
+    "a a 0 0 0"
+    "b d b d b"
+    "c c c e e";
 }
 
 .content-container {
+	display: grid;
     background-color: #282828;
-    position: absolute;
+    border: 2px solid black;
+    position: relative;
     color: var(--light);
     width: 35em;
+    margin: .5em 1em;
+
 }
 
 .content-heading{
-    display: inline-block;
     height: auto;
     width: 180px;
     left: 0.5em;
     background-color: var(--dark-grey);
-    margin: 1em 1em;
-    padding: 0;
-}
-.lorem-content {
-    background-color: var(--light-grey);
-    padding: 0 1em;
-    margin: 1em 1em;
+    margin: 1em 1rem;
+    border-radius: .3em;
+    padding: .5rem;
+    grid-area: a 0;
 }
 
-.items1, .items2, .items3 {
-    /* display: inline-block; */
-    background-color: var(--light-green);
-    color: #212121;
-    margin: .5em;
-    padding: .5em;
-    border-radius: 10px;
+.lorem-content {
+    background-color: var(--light-grey);
+    padding: 2em;
+    margin: -0.7em 1rem;
+    border-radius: .6em;
+    margin-right: 6rem;
+    grid-area: b d;
 }
 
 .eclipse {
-    background-color: var(--dark);
-    right: 0;
-    width: 100%;
-
+	grid-area:  e c ;
+	place-items: end;
+	justify-self:end;
+	background-color: var(--dark);
 }
 
+.eclipse2 {
+	position: absolute;
+	margin-top: 2rem;
+	bottom: 0;
+	margin:0;
+	z-index: 1;
+}
 
+/* second content */
 
+.next-content {
+	background-color: var(--light-grey);
+	padding: .7rem;
+	margin: .5rem 1rem;
+	margin-left: 2rem;
+	margin-bottom: 3rem;
+	border-radius: .6em;
+	border: 1px solid black;
+}
 
-@media screen and (max-width: 800px) {
+.content-heading2 {
+	height: auto;
+    width: 180px;
+    left: 0.5em;
+    background-color: var(--dark-grey);
+    margin: 1em 1rem;
+    margin-left: 2rem;
+    border-radius: .3em;
+    padding: .5rem;
+}
+/* message section */
+
+.input-container {
+	margin: .7rem;
+	background-color: var(--light-white);
+	height: 35rem;
+	width: 22rem;
+	border: .2rem solid black;
+	border-radius: .8em;
+	position: absolute;
+	right:0;
+}
+
+input {
+	outline: none;
+	border: none;
+	background-color: rgba(0,0,0,0)
+}
+
+input ::placeholder{
+	text-align: left;
+	margin-right: 1em;
+}
+
+.input-container input, textarea{
+	margin: 2rem 1rem;
+	width:85%;
+	border-bottom: 1px solid black;
+}
+
+.input-container h4{
+	margin: 0 1em;
+	padding: 0;
+}
+
+.input-container [placeholder] {
+	 
+}
+
+.input-container textarea {
+	border: 1px solid black;
+	border-radius: .8em;
+	height: 17em;
+	width: 85%;
+}
+
+.input-container button {
+	font-size: 1rem;
+	margin:  .5rem 1rem;
+	padding: .5rem;
+	border-radius: .4em;
+	background-color: #10cfe9;
+	border:none
+}
+
+/* green section */
+.green-area {
+	height: 7rem;
+	margin: 1rem;
+	background-color: var(--light-green);
+	border: 2px solid black;
+	border-radius: .6em;
+	diaplay: flex;
+	justify-content: space-between;
+ 
+}
+
+/* font awesome icons */
+.green-area i {
+	font-size: 4rem;
+    justify-content: space-between;
+    margin: 2rem 7rem;
+}
+
+@media screen and (max-width: 900px) {
     .logo {
         padding: 1em 1.5em;
         margin: 1em;
@@ -104,10 +213,21 @@ body{
         .content-container {
             width: auto;
         }
+        .input-container {
+			position: relative;
+			width: auto;
+			margin: 1rem;
+	}
+	
+	.green-area i {
+	font-size: 4rem;
+    justify-content: space-between;
+    margin: 2rem 6rem;
+	}
 }
 
 
-@media screen and (max-width:550px) {
+@media screen and (max-width:650px) {
     .links {
         display:none;
     }
@@ -119,5 +239,16 @@ body{
     .content-container {
         width: auto;
     }
-
+	
+	.input-container {
+		position: static;
+		width: auto;
+		margin: 1rem;
+	}
+	
+	.green-area i {
+	font-size: 4rem;
+    justify-content: space-between;
+    margin: 2rem 2.1rem;
+	}
 }
