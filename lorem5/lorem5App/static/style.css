@@ -182,19 +182,20 @@ input {
 
 /* green section */
 .green-area {
-	height: 5rem;
+	height: 6rem;
 	margin: 1rem;
 	background-color: var(--light-green);
 	border: 2px solid black;
 	border-radius: .6em;
 	display: flex;
 	justify-content: space-between;
+	
 }
 
 /* font awesome icons */
 .green-area span {
 	font-size: 3rem;
-	margin: 1rem 2rem;
+	margin: 1.3rem 2rem;
 }
 
 @media screen and (max-width: 900px) {
@@ -211,12 +212,6 @@ input {
 			position: relative;
 			width: auto;
 			margin: 1rem;
-	}
-	
-	.green-area span {
-	font-size: 2rem;
-    justify-content: space-between;
-    margin: 1rem;
 	}
 }
 
@@ -270,4 +265,23 @@ input {
 		width: auto;
 		margin: 1rem;
 	}
+	
+	/* green area */
+	.green-area {
+		height: 4rem;
+		margin: 1rem;
+		background-color: var(--light-green);
+		border: 2px solid black;
+		border-radius: .6em;
+		display: flex;
+		justify-content: space-between;
+		
+	}
+	
+	/* font awesome icons */
+	.green-area span {
+		font-size: 2rem;
+		margin: .8rem 2rem;
+	}
+	
 }
