@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['lorem5.hetokuapp.com']
+ALLOWED_HOSTS = ['lorem5.herokuapp.com']
 
 
 # Application definition
@@ -52,7 +52,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'lorem5.urls'
+ROOT_URLCONF = 'lorem5.lorem5.urls'
 
 TEMPLATES = [
     {
@@ -70,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'lorem5.wsgi.application'
+WSGI_APPLICATION = 'lorem.lorem5.wsgi.application'
 
 
 # Database
