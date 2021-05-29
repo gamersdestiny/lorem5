@@ -52,7 +52,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'lorem5.lorem5.urls'
+ROOT_URLCONF = 'lorem5.urls'
 
 TEMPLATES = [
     {
