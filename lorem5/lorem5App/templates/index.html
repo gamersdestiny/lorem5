@@ -6,6 +6,295 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/style.css">
     <link rel="shortcut icon" type="image/png" href="/static/favicon/favicon.png">
+    <style>
+	@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+	
+	:root{
+	    --black: #212121;
+	    --dark: #282828;
+	    --light: #FBFBFB;
+	    --yellow: #F3FF6E;
+	    --light-white: rgba(251, 251, 251, 0.8);
+	    --light-green: #A2F6B9;
+	    --light-blue: #10CFE9;
+	    --dark-grey: #868686;
+	    --light-grey: #C4C4C4;
+	
+	}
+	
+	body{
+	    box-sizing: border-box;
+	    margin: 0;
+	    padding: 0%;
+	    font-family: sans-serif;
+	    font-weight: 550;
+	    background-color: var(--light-grey);
+	}
+	
+	/* navbar */
+	.navbar-container {
+	    background-color: #000;
+	    color: #fff;
+	    display: flex;
+	    justify-content: space-between;
+	}
+	
+	.logo {
+	    padding: 0.5em 2em;
+	    background-color: var(--yellow);
+	    color: #000;
+	    border-radius: .5em;
+	    margin: 2em;
+	    font-family: 'Kanit', sans-serif;
+	}
+	
+	.nav-bars {
+		display: none;
+	}
+	
+	.links {
+	    list-style: none;
+	}
+	
+	.items1, .items2, .items3 {
+	    display: inline-block;
+	    background-color: var(--light-green);
+	    color: #212;
+	    margin: 1.5em 1em;
+	    padding: .3em 2em;
+	    border-radius: 10px;
+	}
+	
+	/* section 1 */
+	.content-section {
+		display: grid;
+		grid-template-area: 
+	    "a a 0 0 0"
+	    "b d b d b"
+	    "c c c e e";
+	}
+	
+	.content-container {
+		display: grid;
+	    background-color: #282828;
+	    border: 2px solid black;
+	    position: relative;
+	    color: var(--light);
+	    width: 35em;
+	    margin: .5em 1em;
+	
+	}
+	
+	.content-heading{
+	    height: auto;
+	    width: 180px;
+	    left: 0.5em;
+	    background-color: var(--dark-grey);
+	    margin: 1em 1rem;
+	    border-radius: .3em;
+	    padding: .5rem;
+	    grid-area: a 0;
+	}
+	
+	.lorem-content {
+	    background-color: var(--light-grey);
+	    padding: 1rem;
+	    margin: -0.7em 1rem;
+	    border-radius: .6em;
+	    margin-right: 6rem;
+	    grid-area: b d;
+	}
+	
+	.eclipse {
+		grid-area:  e c ;
+		place-items: end;
+		justify-self:end;
+		background-color: var(--dark);
+	}
+	
+	.eclipse2 {
+		position: absolute;
+		margin-top: 2rem;
+		bottom: 0;
+		margin:0;
+		z-index: 1;
+	}
+	
+	/* second content */
+	
+	.next-content {
+		background-color: var(--light-grey);
+		padding: .7rem;
+		margin: .5rem 1rem;
+		margin-left: 2rem;
+		margin-bottom: 3rem;
+		border-radius: .6em;
+		border: 1px solid black;
+	}
+	
+	.content-heading2 {
+		height: auto;
+	    width: 180px;
+	    left: 0.5em;
+	    background-color: var(--dark-grey);
+	    margin: 1em 1rem;
+	    margin-left: 2rem;
+	    border-radius: .3em;
+	    padding: .5rem;
+	}
+	/* message section */
+	
+	.input-container {
+		margin: 3rem 1rem;
+		background-color: var(--light-white);
+		height: 35rem;
+		width: 22rem;
+		border: .2rem solid black;
+		border-radius: .8em;
+		position: absolute;
+		right:0;
+	}
+	
+	input {
+		outline: none;
+		border: none;
+		background-color: rgba(0,0,0,0)
+	}
+	
+	.input-container input, textarea{
+		margin: 2rem 1rem;
+		width:85%;
+		border-bottom: 1px solid black;
+	}
+	
+	.input-container h4{
+		margin: 0 1em;
+		padding: 0;
+	}
+	
+	.input-container textarea {
+		border: 1px solid black;
+		border-radius: .8em;
+		height: 17em;
+		width: 85%;
+	}
+	
+	.input-container button {
+		font-size: 1rem;
+		margin:  .5rem 1rem;
+		padding: .5rem;
+		border-radius: .4em;
+		background-color: #10cfe9;
+		border:none
+	}
+	
+	/* green section */
+	.green-area {
+		height: 6rem;
+		margin: 1rem;
+		background-color: var(--light-green);
+		border: 2px solid black;
+		border-radius: .6em;
+		display: flex;
+		justify-content: space-between;
+		
+	}
+	
+	/* font awesome icons */
+	.green-area span {
+		font-size: 3rem;
+		margin: 1.3rem 2rem;
+	}
+	
+	@media screen and (max-width: 900px) {
+	    .logo {
+	        padding: 1em 1.5em;
+	        margin: 1em;
+	        font-size: 1em;
+	        }
+	
+	        .content-container {
+	            width: auto;
+	        }
+	        .input-container {
+				position: relative;
+				width: auto;
+				margin: 1rem;
+		}
+	}
+	
+	
+	@media screen and (max-width:650px) {
+	
+	    .logo {
+	    font-size: 0.7em;
+	    }
+	
+	/* Bars */
+		.nav-bars { 
+		display: flex;
+		right: 1rem;
+		position: absolute;
+		font-size: 1.5rem;
+		margin: 1rem;
+		z-index:1;
+		}
+		
+	/* navbar container */
+		.navbar-container {
+			flex-direction: column;
+		}
+	
+		.navbar-container .logo {
+			width: 2rem;
+		}	
+		
+	/* items */
+		.links {
+			display: none;
+	    }
+	    .links.shows {
+	    	display: flex;
+			flex-direction: column;
+			align-items: center;
+	    }
+	    
+		.items1, .items2, .items3 {
+	
+			align-items: center;
+		}
+		
+	    .content-container {
+	        width: auto;
+	    }
+		
+		.input-container {
+			position: static;
+			width: auto;
+			margin: 1rem;
+		}
+		
+		/* green area */
+		.green-area {
+			height: 4rem;
+			margin: 1rem;
+			background-color: var(--light-green);
+			border: 2px solid black;
+			border-radius: .6em;
+			display: flex;
+			justify-content: space-between;
+			
+		}
+		
+		/* font awesome icons */
+		.green-area span {
+			font-size: 2rem;
+			margin: .8rem 2rem;
+		}
+		
+	}    
+    </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <title>Lorem-Home</title>
 </head>
@@ -68,6 +357,13 @@
     
     <!-- javascript -->
  <!--   <script src="http://100.69.165.58:8080/target/target-script-min.js#anonymous"></script>  -->
-    <script src="static/script.js"></script>
+    <script>
+		const bars = document.querySelector(".nav-bars");
+		const links = document.querySelector(".links");
+		
+		bars.addEventListener("click", (e)=>{
+			links.classList.toggle("shows")
+		});    
+    </script>
 </body>
 </html>
