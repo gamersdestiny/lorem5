@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path , include
-from lorem5App import views as lorem5views
+from lorem5.lorem5App import views as lorem5views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
