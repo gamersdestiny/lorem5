@@ -19,5 +19,5 @@ from lorem5App import views as lorem5views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('lorem5App.urls') )
+    path('', include('lorem5.lorem5App.urls') )
 ]

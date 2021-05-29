@@ -1,0 +1,1 @@
+web: gunicorn lorem5.lorem5.wsgi --log-file -
