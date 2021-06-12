@@ -58,23 +58,24 @@ body{
 }
 
 /* section 1 */
-.content-section {
-	display: grid;
-	grid-template-area: 
-    "a a 0 0 0"
-    "b d b d b"
-    "c c c e e";
+.content-section{
+	display: flex;
+	justify-content: space-around;
+	margin: 2rem;
 }
 
+/* .big-content-container{
+	width: 70%;
+} */
+
 .content-container {
-	display: grid;
+    display: grid;
     background-color: #282828;
     border: 2px solid black;
     position: relative;
     color: var(--light);
-    width: 35em;
+    min-width: 60%;
     margin: .5em 1em;
-
 }
 
 .content-heading{
@@ -98,10 +99,9 @@ body{
 }
 
 .eclipse {
-	grid-area:  e c ;
 	place-items: end;
 	justify-self:end;
-	background-color: var(--dark);
+	margin-top: 1rem;
 }
 
 .eclipse2 {
@@ -136,15 +136,16 @@ body{
 }
 /* message section */
 
+.big-input-container{
+	width: auto;
+}
+
 .input-container {
-	margin: 3rem 1rem;
 	background-color: var(--light-white);
-	height: 35rem;
-	width: 22rem;
 	border: .2rem solid black;
 	border-radius: .8em;
-	position: absolute;
-	right:0;
+	margin: auto 1rem;
+	min-width: 20rem;
 }
 
 input {
@@ -155,7 +156,7 @@ input {
 
 .input-container input, textarea{
 	margin: 2rem 1rem;
-	width:85%;
+	width:95%;
 	border-bottom: 1px solid black;
 }
 
@@ -167,8 +168,8 @@ input {
 .input-container textarea {
 	border: 1px solid black;
 	border-radius: .8em;
-	height: 17em;
-	width: 85%;
+	height: 190px;
+	width: 265px;
 }
 
 .input-container button {
@@ -198,7 +199,7 @@ input {
 	margin: 1.3rem 2rem;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1200px) {
     .logo {
         padding: 1em 1.5em;
         margin: 1em;
@@ -213,10 +214,18 @@ input {
 			width: auto;
 			margin: 1rem;
 	}
+
+	.content-section{
+		display: block;
+	}
+
+	.input-container textarea{
+		width: 95%;
+	}
 }
 
 
-@media screen and (max-width:650px) {
+@media screen and (max-width:700px) {
 
     .logo {
     font-size: 0.7em;
@@ -260,10 +269,23 @@ input {
         width: auto;
     }
 	
+	.lorem-content{
+		width: 80%;
+		
+	}
+
 	.input-container {
 		position: static;
 		width: auto;
 		margin: 1rem;
+	}
+
+	.input-container input{
+		width: 90%;
+	}
+
+	.input-container textarea{
+		width: 90%;
 	}
 	
 	/* green area */

@@ -123,4 +123,13 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 STATIC_URL = '/static/'
 
+#email 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True 
+EMAIL_HOST_USER = os.environ.get('gunaGmail')
+EMAIL_HOST_PASSWORD = os.environ.get('gunaGmailPassword')
+
+
 django_heroku.settings(locals())
