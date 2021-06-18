@@ -61,7 +61,6 @@ body{
 .content-section{
 	display: flex;
 	justify-content: space-around;
-	margin: 2rem;
 }
 
 /* .big-content-container{
@@ -138,6 +137,7 @@ body{
 
 .big-input-container{
 	width: auto;
+	margin: auto;
 }
 
 .input-container {
