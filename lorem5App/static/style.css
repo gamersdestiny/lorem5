@@ -137,7 +137,7 @@ body{
 
 .big-input-container{
 	width: auto;
-	margin: auto;
+	margin: auto 0;
 }
 
 .input-container {
